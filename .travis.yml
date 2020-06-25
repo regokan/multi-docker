@@ -1,0 +1,21 @@
+language: generic
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t regokan/react-test -f ./client/Dockerfile.dev ./client
+
+script:
+  - docker run -e CI=true regokan/react-test npm run test
+
+after_success:
+  - docker build -t regokan/multi-react ./client
+  - docker build -t regokan/multi-nginx ./nginx
+  - docker build -t regokan/multi-worker ./worker
+  - docker build -t regokan/multi-server ./server
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push regokan/multi-react
+  - docker push regokan/multi-nginx
+  - docker push regokan/multi-worker
+  - docker push regokan/multi-server
