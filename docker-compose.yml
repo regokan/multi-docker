@@ -3,7 +3,7 @@ services:
   postgres:
     image: "postgres:latest"
     environment:
-      - POSTGRES_PASWORD=postgres_password
+      - POSTGRES_PASSWORD=postgres_password
   redis:
     image: "redis:latest"
   nginx:
