@@ -65,7 +65,9 @@
 1. Scroll down to Network and Security change Security group to multi-docker
 1. Scroll down and click Continue button
 1. Click Modify DB instance button
-1. Applying Security Groups to Elastic Beanstalk
+
+# Applying Security Groups to Elastic Beanstalk
+
 1. Go to AWS Management Console and use Find Services to search for Elastic Beanstalk
 1. Click the multi-docker application tile
 1. Click Configuration link in Sidebar
