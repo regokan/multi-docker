@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "client",
-      "image": "regokan/multi-client",
+      "image": "regokan/multi-react",
       "hostname": "client",
       "essential": false,
       "memory": 128
