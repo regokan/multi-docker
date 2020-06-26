@@ -56,7 +56,9 @@
 1. Check box next to Redis cluster and click Modify
 1. Change VPC Security group to the multi-docker group and click Save
 1. Click Modify
-1. Applying Security Groups to RDS
+
+# Applying Security Groups to RDS
+
 1. Go to AWS Management Console and use Find Services to search for RDS
 1. Click Databases in Sidebar and check box next to your instance
 1. Click Modify button
